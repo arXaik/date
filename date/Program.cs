@@ -1,0 +1,26 @@
+﻿Console.WriteLine("1:");
+Console.WriteLine("Первая дата");
+Console.Write("Введите год:");
+int year = int.Parse(Console.ReadLine());
+Console.Write("Введите месяц:");
+int month = int.Parse(Console.ReadLine());
+Console.Write("Введите день:");
+int day = int.Parse(Console.ReadLine());
+DateOnly date1 = new DateOnly(year, month, day);
+Console.WriteLine("Вторая дата:");
+Console.Write("Введите год:");
+int year2 = int.Parse(Console.ReadLine());
+Console.Write("Введите месяц:");
+int month2 = int.Parse(Console.ReadLine());
+Console.Write("Введите день:");
+int day2 = int.Parse(Console.ReadLine());
+DateOnly date2 = new DateOnly(year2, month2, day2);
+int months = (date2.Month + date2.Year * 12) - (date1.Month + date1.Year * 12);
+Console.WriteLine(months);
+
+Console.WriteLine("2:");
+DateTime present = DateTime.Now;
+Console.WriteLine($"Текущая дата и время:{present}");
+Console.WriteLine("Введите количество минут:");
+int timer = int.Parse(Console.ReadLine());
+Console.WriteLine(present.AddMinutes(timer));
